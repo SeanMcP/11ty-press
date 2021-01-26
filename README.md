@@ -1,5 +1,6 @@
 # `11ty-press`
 
+📰 An Eleventy starter, organized like Wordpress
 ## Inspiration
 
 This template was heavily inspired by:

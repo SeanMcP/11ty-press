@@ -1,7 +1,7 @@
 {
   "name": "11ty-press",
   "version": "1.0.0",
-  "description": "",
+  "description": "An Eleventy starter, organized like Wordpress",
   "scripts": {
     "build": "eleventy",
     "start": "eleventy --serve",
