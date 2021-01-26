@@ -1,5 +1,4 @@
 {
     "tags": ["posts"],
-    "//": "Look into adding page date to the permalink",
-    "permalink": "/blog/{{ page.fileSlug }}/"
+    "permalink": "/blog/{{ page.date | getDateFromISO }}/{{ page.fileSlug }}/"
 }
