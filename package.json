@@ -3,8 +3,12 @@
   "version": "1.0.0",
   "description": "An Eleventy starter, organized like Wordpress",
   "scripts": {
-    "build": "eleventy",
-    "start": "eleventy --serve",
+    "build": "npm-run-all --parallel build:*",
+    "build:site": "eleventy",
+    "build:styles": "sass --style=compressed src/_theme/sass:_site/assets/",
+    "dev:site": "eleventy --serve",
+    "dev:styles": "sass --watch src/_theme/sass/:_site/assets/",
+    "start": "npm-run-all --parallel dev:*",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -17,5 +21,9 @@
   "devDependencies": {
     "@11ty/eleventy": "^0.11.1",
     "@11ty/eleventy-plugin-rss": "^1.1.0"
+  },
+  "dependencies": {
+    "npm-run-all": "^4.1.5",
+    "sass": "^1.32.5"
   }
 }
