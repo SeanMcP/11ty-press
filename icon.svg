@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   inkscape:export-ydpi="96"
+   inkscape:export-xdpi="96"
+   inkscape:export-filename="/Users/seanmcp/dev/seanmcp/11ty-press/src/_assets/favicon.png"
+   sodipodi:docname="icon.svg"
+   inkscape:version="1.0rc1 (09960d6, 2020-04-09)"
+   id="svg8"
+   version="1.1"
+   viewBox="0 0 16.933333 16.933334"
+   height="64"
+   width="64">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     inkscape:window-maximized="0"
+     inkscape:window-y="23"
+     inkscape:window-x="0"
+     inkscape:window-height="943"
+     inkscape:window-width="1252"
+     showguides="false"
+     units="px"
+     showgrid="true"
+     inkscape:document-rotation="0"
+     inkscape:current-layer="text843"
+     inkscape:document-units="mm"
+     inkscape:cy="39.637386"
+     inkscape:cx="39.723333"
+     inkscape:zoom="6.436569"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     borderopacity="1.0"
+     bordercolor="#666666"
+     pagecolor="#ffffff"
+     id="base">
+    <inkscape:grid
+       empspacing="4"
+       id="grid833"
+       type="xygrid" />
+    <sodipodi:guide
+       id="guide845"
+       orientation="0.70710678,-0.70710678"
+       position="-152.4,101.6" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="layer1"
+     inkscape:groupmode="layer"
+     inkscape:label="Layer 1">
+    <circle
+       r="8.4666662"
+       cy="8.4666662"
+       cx="8.4666662"
+       id="path835"
+       style="fill:#424242;stroke:none;stroke-width:0.79375;fill-opacity:1" />
+    <circle
+       style="fill:#ffffff;stroke:none;stroke-width:0.744141"
+       id="circle837"
+       cx="8.4666662"
+       cy="8.4666662"
+       r="7.9375" />
+    <path
+       inkscape:connector-curvature="0"
+       d="M 15.610417,8.466667 A 7.1437502,7.1437502 0 0 1 8.466667,15.610417 7.1437502,7.1437502 0 0 1 1.3229168,8.466667 7.1437502,7.1437502 0 0 1 8.466667,1.3229168 7.1437502,7.1437502 0 0 1 15.610417,8.466667"
+       style="fill:#424242;fill-opacity:1;stroke:none;stroke-width:0.669727"
+       id="circle839" />
+    <g
+       transform="matrix(0.96154086,0,0,0.96154086,0.32562088,0.32562049)"
+       style="font-style:normal;font-weight:normal;font-size:13.6166px;line-height:1.25;font-family:sans-serif;letter-spacing:-1.06837px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.340417"
+       id="text843"
+       aria-label="XI">
+      <text
+         id="text873"
+         y="12.777926"
+         x="1.2250482"
+         style="font-style:normal;font-weight:normal;font-size:13.0228px;line-height:1.25;font-family:sans-serif;letter-spacing:-1.23569px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.11083"
+         xml:space="preserve"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-family:Baskerville;-inkscape-font-specification:'Baskerville Semi-Bold';fill:#ffffff;stroke-width:0.11083"
+           y="12.777926"
+           x="1.2250482"
+           id="tspan871"
+           sodipodi:role="line">XI</tspan></text>
+    </g>
+  </g>
+</svg>
