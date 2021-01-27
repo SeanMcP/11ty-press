@@ -1,4 +1,5 @@
 module.exports = (config) => {
+  config.addPlugin(require("@11ty/eleventy-plugin-rss"));
   // Settings
   config.addPassthroughCopy({ "src/_assets/": "assets/" });
   config.setDataDeepMerge(true);
