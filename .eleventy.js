@@ -11,7 +11,7 @@ module.exports = (config) => {
   config.setDataDeepMerge(true);
   
   /* ---------- FILTERS ---------- */
-  config.addFilter("getDateFromISO", (date) => {
+  config.addFilter("dateToSlug", (date) => {
     return date.toISOString().split("T")[0].replace(/-/g, "/");
   });
 
