@@ -8,10 +8,12 @@
     <link rel="shortcut icon" href="/assets/favicon.png" type="image/png">
     {% for file in stylesheets %}<link rel="stylesheet" href="/assets/css/{{ file }}" />{% endfor %}
     {% if head %}{{ head | safe }}{% endif %}
+    {% injectInline 'css' %}
   </head>
   <body>
     {{ content | safe }}
     {% for file in scripts %}<script src="/assets/js/{{ file }}" type="module"></script>{% endfor %}
     {% if foot %}{{ foot | safe }}{% endif %}
+    {% injectInline 'js' %}
   </body>
 </html>
