@@ -5,9 +5,10 @@
   "scripts": {
     "build": "npm-run-all --parallel build:*",
     "build:site": "eleventy",
-    "build:styles": "sass --style=compressed src/_theme/sass:_site/assets/",
+    "build:styles": "sass --style=compressed src/_theme/sass:_site/assets/css/",
     "dev:site": "eleventy --serve",
-    "dev:styles": "sass --watch src/_theme/sass/:_site/assets/",
+    "dev:styles": "sass --watch src/_theme/sass/:_site/assets/css/",
+    "prestart": "rm -rf _site/",
     "start": "npm-run-all --parallel dev:*",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
