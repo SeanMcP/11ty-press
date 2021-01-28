@@ -4,7 +4,7 @@
  #}
 
 {% set pageTitle = ((title + ' - ') if title else '') + metadata.title %}
-{% set pageDesc = '' %}
+{% set pageDesc = description or metadata.description %}
 {% set siteTitle = metadata.title %}
 {% set currentUrl = metadata.url + page.url %}
 
@@ -28,11 +28,9 @@
     <meta name="twitter:creator" content="@{{ metadata.author.twitter | replace('@', '') }}"/>
 {% endif %}
 
-{% if metaDesc %}
-    <meta name="description" content="{{ metaDesc }}"/>
-    <meta name="twitter:description" content="{{ metaDesc }}"/>
-    <meta property="og:description" content="{{ metaDesc }}"/>
-{% endif %}
+<meta name="description" content="{{ pageDesc }}"/>
+<meta name="twitter:description" content="{{ pageDesc }}"/>
+<meta property="og:description" content="{{ pageDesc }}"/>
 
 {% if socialImage %}
     <meta property="og:image" content="{{ socialImage }}"/>
