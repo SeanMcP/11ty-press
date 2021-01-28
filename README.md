@@ -1,6 +1,10 @@
 # `11ty-press`
 
 📰 An Eleventy starter, organized like Wordpress
+
+## Organization
+
+Every directory in `src/` that is prefaced with an underscore (`_`) is for configuration. When working with content, you will mostly be in `posts/` and `pages/`.
 ## Inspiration
 
 This template was heavily inspired by:
