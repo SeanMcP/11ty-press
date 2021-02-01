@@ -18,7 +18,7 @@ module.exports = function (config) {
     "image",
     async function (src, alt, contextClass, sizes) {
       let metadata = await Image(
-        urlPattern.test(src) ? src : "src/_assets/images/" + src,
+        urlPattern.test(src) ? src : "src/_media/" + src,
         {
           filenameFormat: function (_, src, width, format) {
             return buildFilename(src, width, format);

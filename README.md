@@ -2,6 +2,13 @@
 
 📰 An Eleventy starter, organized like Wordpress
 
+## Features
+
+- 💄 Enhanced CSS stylesheets with Sass
+- 📸 Automatic image resizing with `@11ty/eleventy-img`
+- 💉 Custom shortcodes for injecting inline CSS and JavaScript
+- 🗃 Wordpress-style directory structure
+- 📰 A blog with feed
 ## Organization
 
 Every directory in `src/` that is prefaced with an underscore (`_`) is for configuration. When working with content, you will mostly be in `posts/` and `pages/`.

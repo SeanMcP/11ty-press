@@ -6,9 +6,9 @@ module.exports = (config) => {
   config.addPlugin(require("./src/_plugins/image"));
 
   /* ---------- SETTINGS ---------- */
-  config.addPassthroughCopy({ "src/_assets/": "assets/" });
+  config.addPassthroughCopy({ "src/_appearance/theme/assets/": "assets/" });
   // Reload on sass changes
-  config.addWatchTarget("src/_theme/sass/");
+  config.addWatchTarget("src/_appearance/theme/");
   config.setDataDeepMerge(true);
 
   /* ---------- FILTERS ---------- */
@@ -20,6 +20,7 @@ module.exports = (config) => {
     markdownTemplateEngine: 'njk',
     dir: {
       input: "src/",
+      includes: "_appearance/"
     },
   };
 };

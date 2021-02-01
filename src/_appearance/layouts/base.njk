@@ -11,6 +11,11 @@
     {% injectInline 'css' %}
   </head>
   <body>
+    <nav>
+    {% for link in menu.primary %}
+      <a href="{{ link.url }}">{{ link.label }}</a>
+    {% endfor %}
+    </nav>
     {{ content | safe }}
     {% for file in scripts %}<script src="/assets/js/{{ file }}" type="module"></script>{% endfor %}
     {% if foot %}{{ foot | safe }}{% endif %}
