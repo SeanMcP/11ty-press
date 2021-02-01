@@ -32,6 +32,10 @@
 <meta name="twitter:description" content="{{ pageDesc }}"/>
 <meta property="og:description" content="{{ pageDesc }}"/>
 
+{% if postImage %}
+    {% set socialImage = postImage | imageUrl | absoluteUrl(metadata.url) %}
+{% endif %}
+
 {% if socialImage %}
     <meta property="og:image" content="{{ socialImage }}"/>
     <meta name="twitter:image" content="{{ socialImage }}"/>
