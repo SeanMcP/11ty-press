@@ -1,5 +1,6 @@
 ---
 title: Hello world!
+date: 2020-12-31
 postImage: press.jpg
 ---
 

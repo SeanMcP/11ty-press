@@ -1,0 +1,23 @@
+<nav class="posts-by-date">
+    <ul>
+        {% for year, months in collections.postsByDate %}
+            <li>
+                <span class="posts-by-date__title" data-type="year">{{ year }}</span>
+                <ul>
+                    {% for month, posts in months %}
+                        <li>
+                            <span class="posts-by-date__title" data-type="month">{{ month }}</span>
+                            <ul>
+                                {% for post in posts %}
+                                    <li>
+                                        <a class="posts-by-date__link" href="{{ post.url }}">{{ post.data.title }}</a>
+                                    </li>
+                                {% endfor %}
+                            </ul>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </li>
+        {% endfor %}
+    </ul>
+</nav>
