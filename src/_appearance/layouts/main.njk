@@ -9,6 +9,7 @@ layout: layouts/base.njk
 <main class="site-main" id="main-content">{{ content | safe }}</main>
 
 <aside class="site-aside">
+    {% include "partials/search-bar.njk" %}
     {% include "partials/posts-by-date.njk" %}
 </aside>
 

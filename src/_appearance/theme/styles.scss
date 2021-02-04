@@ -16,3 +16,9 @@ body {
 .skiplink:not(:focus) {
   left:-100%;
 }
+
+.search-bar {
+  &__attribution {
+    display: block;
+  }
+}
