@@ -1,6 +1,22 @@
-<form class="search-bar" action="https://duckduckgo.com/">
-    <input aria-hidden="true" hidden name="sites" value="{{ metadata.url }}" />
+{% if metadata.searchEngine == 'DuckDuckGo' %}
+    {% set params = {
+        action: "https://duckduckgo.com",
+        hiddenName: "sites",
+        hiddenValue: metadata.url,
+        url: "https://duckduckgo.com"
+    } %}
+{% elif metadata.searchEngine == 'Google' %}
+    {% set params = {
+        action: "https://google.com/search",
+        hiddenName: "q",
+        hiddenValue: "site:" + metadata.url,
+        url: "https://google.com"
+    } %}
+{% endif %}
+
+<form class="search-bar" action="{{ params.action }}">
+    <input aria-hidden="true" hidden name="{{ params.hiddenName }}" value="{{ params.hiddenValue }}" />
     <input aria-label="Search query" name="q" type="search" autocomplete="off" />
     <button>Search</button>
-    <small class="search-bar__attribution">Search powered by <a href="https://duckduckgo.com/" target="_blank" rel="noreferrer">DuckDuckGo</a></small>
+    <small class="search-bar__attribution">Search powered by <a href="{{ params.url }}" target="_blank" rel="noreferrer">{{ metadata.searchEngine }}</a></small>
 </form>

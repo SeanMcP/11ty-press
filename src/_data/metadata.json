@@ -1,11 +1,12 @@
 {
   "title": "My Blog about Boats",
   "description": "I am writing about my experiences as a naval navel-gazer.",
-  "url": "https://11ty-press.netlify.app",
+  "url": "https://seanmcp.com",
   "feedUrl": "https://11ty-press.netlify.app/feed.xml",
   "author": {
     "name": "Boaty McBoatFace",
     "email": "me@example.com",
     "twitter": "@therealboatymcboatface"
-  }
+  },
+  "searchEngine": "DuckDuckGo"
 }
