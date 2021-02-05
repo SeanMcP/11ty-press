@@ -46,6 +46,37 @@ module.exports = (config) => {
     return postsByDate;
   });
 
+  config.addCollection("tagList", (collectionApi) => {
+    // Glob here to include only tags set in post files
+    const posts = collectionApi.getFilteredByGlob("src/posts/*.md");
+    const tagCount = {};
+
+    posts.forEach((post) => {
+      if (!"tags" in post.data) return;
+
+      post.data.tags.forEach((tag) => {
+        if (!tagCount[tag]) {
+          tagCount[tag] = 1;
+        } else {
+          tagCount[tag]++;
+        }
+      });
+    });
+
+    const alphabetical = Object.keys(tagCount).sort();
+    const popular = alphabetical.sort((a, b) => tagCount[b] - tagCount[a]);
+    const popularWithCount = popular.reduce((acc, current) => {
+      acc.push([current, tagCount[current]]);
+      return acc;
+    }, []);
+
+    return {
+      alphabetical,
+      popular,
+      popularWithCount,
+    };
+  });
+
   return {
     markdownTemplateEngine: "njk",
     dir: {
