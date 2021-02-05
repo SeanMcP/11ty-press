@@ -16,6 +16,10 @@ module.exports = (config) => {
     return date.toISOString().split("T")[0].replace(/-/g, "/");
   });
 
+  config.addFilter("jsSlice", (array, ...args) => {
+    return array.slice(...args);
+  });
+
   /* ---------- COLLECTIONS ---------- */
   config.addCollection("postsByDate", (collectionApi) => {
     const posts = collectionApi.getFilteredByTag("posts");
