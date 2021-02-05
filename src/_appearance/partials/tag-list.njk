@@ -1,9 +1,11 @@
-<h3>Tag list</h3>
-<ul class="tag-list">
-    {% for tag in collections.tagList.popularWithCount %}
-        <li class="tag-list__item">
-            <a class="tag-list__link" href="tags/{{tag[0]}}">{{ tag[0] | capitalize }}
-                ({{ tag[1] }})</a>
-        </li>
-    {% endfor %}
-</ul>
+<div class="tag-list">
+    <h3>Tag list</h3>
+    <ul class="tag-list__list">
+        {% for tag in collections.tagList.popularWithCount %}
+            <li class="tag-list__item">
+                <a class="tag-list__link" href="tags/{{tag[0]}}">{{ tag[0] | capitalize }}
+                    ({{ tag[1] }})</a>
+            </li>
+        {% endfor %}
+    </ul>
+</div>
