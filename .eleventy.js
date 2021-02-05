@@ -20,6 +20,16 @@ module.exports = (config) => {
     return array.slice(...args);
   });
 
+  config.addFilter("shuffle", (array) => {
+    const next = array.slice(0);
+    // https://stackoverflow.com/a/12646864
+    for (let i = next.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [next[i], next[j]] = [next[j], next[i]];
+    }
+    return next;
+  });
+
   /* ---------- COLLECTIONS ---------- */
   config.addCollection("postsByDate", (collectionApi) => {
     const posts = collectionApi.getFilteredByTag("posts");

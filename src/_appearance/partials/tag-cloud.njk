@@ -1,0 +1,11 @@
+<div class="tag-cloud">
+    <h3>Tag cloud</h3>
+    <ol>
+        {% set max = collections.tagList.popularWithCount[0][1] %}
+        {% for tag in collections.tagList.popularWithCount | shuffle %}
+            <li class="tag-list__item">
+                <a class="tag-list__link" href="tags/{{tag[0]}}" style="font-size:max(calc(1rem - {{ (max - tag[1]) * 2 }}px), 0.5rem)">{{ tag[0] | capitalize }}</a>
+            </li>
+        {% endfor %}
+    </ol>
+</div>
