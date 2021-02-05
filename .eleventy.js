@@ -61,14 +61,15 @@ module.exports = (config) => {
   });
 
   config.addCollection("tagList", (collectionApi) => {
-    // Glob here to include only tags set in post files
-    const posts = collectionApi.getFilteredByGlob("src/posts/*.md");
+    const posts = collectionApi.getFilteredByTag("posts");
     const tagCount = {};
 
     posts.forEach((post) => {
       if (!"tags" in post.data) return;
 
       post.data.tags.forEach((tag) => {
+        // Exclude "posts" from list
+        if (tag === "posts") return;
         if (!tagCount[tag]) {
           tagCount[tag] = 1;
         } else {
