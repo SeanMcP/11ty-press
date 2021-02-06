@@ -1,9 +1,17 @@
----
-layout: layouts/main.njk
----
+{% set layoutId = "post" %}
+{% extends "layouts/base.njk" %}
 
-<h1>{{ title }}</h1>
-{% if postImage %}
-    {% image postImage, "printing press" %}
-{% endif %}
-{{ content | safe }}
+{% block crown %}
+    <h1>{{ title }}</h1>
+
+    {% if postImage %}
+        {% image postImage,
+        "printing press" %}
+    {% endif %}
+{% endblock %}
+
+{% block baseboard %}
+    <section class="post-bio">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue eget nulla sit amet pharetra. Ut malesuada, tortor quis venenatis rhoncus, arcu metus feugiat tortor, eu volutpat metus quam ut diam. Phasellus et scelerisque elit. Pellentesque diam massa, tristique at eleifend sit amet, varius sed odio. Quisque commodo varius velit eget finibus. Sed rutrum vel ante vel mollis. Sed commodo quis risus at aliquam. Aliquam lacinia cursus turpis, id maximus nisi. Phasellus vitae porttitor neque. Maecenas vitae sagittis mi, a fringilla risus. Cras efficitur urna eu suscipit hendrerit.
+    </section>
+{% endblock %}

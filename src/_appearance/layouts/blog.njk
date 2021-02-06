@@ -1,0 +1,27 @@
+{% set layoutId = "blog" %}
+{% extends "layouts/base.njk" %}
+
+{% block skiplinks %}
+<a class="skiplink" href="#sidebar-content">Skip to sidebar content</a>
+{% endblock %}
+
+{% block crown %}
+<section class="blog-crown" style="background-color:darkgreen;color:white;font-size:3rem;padding:40px;text-align:center;width:calc(100% - 80px);">
+    <h1>{{ title }}</h1>
+</section>
+{% endblock %}
+
+{% block sidebar %}
+<aside class="blog-sidebar" id="sidebar-content">
+    {% include "partials/tag-cloud.njk" %}
+    {% include "partials/tag-list.njk" %}
+    {% include "partials/archive.njk" %}
+</aside>
+{% endblock %}
+
+{% block baseboard %}
+<section class="blog-baseboard">
+    {% include "partials/search-bar.njk" %}
+    {% include "partials/recent-posts.njk" %}
+</sectino>
+{% endblock %}

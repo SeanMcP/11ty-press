@@ -1,7 +1,8 @@
----
-layout: layouts/base.njk
----
+{% set layoutId = "page" %}
+{% extends "layouts/base.njk" %}
 
-<main id="main">
-    {{ content | safe }}
-</main>
+{% block crown %}
+<section class="page-crown">
+    <h1>{{ title }}</h1>
+</section>
+{% endblock %}

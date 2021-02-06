@@ -6,14 +6,34 @@
     {% include "partials/meta-tags.njk" %}
     <link rel="stylesheet" href="/assets/css/styles.css"/>
     <link rel="shortcut icon" href="/assets/favicon.png" type="image/png">
-    {% for file in stylesheets %}<link rel="stylesheet" href="/assets/css/{{ file }}" />{% endfor %}
-    {% if head %}{{ head | safe }}{% endif %}
+    {% for file in stylesheets %}<link rel="stylesheet" href="/assets/css/{{ file }}"/>{% endfor %}
+    {% if head %}{{ head | safe }}
+    {% endif %}
+    {% block head %}{% endblock %}
     {% injectInline 'css' %}
   </head>
-  <body>
-    {{ content | safe }}
-    {% for file in scripts %}<script src="/assets/js/{{ file }}" type="module"></script>{% endfor %}
-    {% if foot %}{{ foot | safe }}{% endif %}
+  <body {% if layout %} data-layout="{{ layoutId }}" {% endif %} data-page="{{ page.url }}">
+    <a class="skiplink" href="#main-content">Skip to main content</a>
+    {% block skiplinks %}{% endblock %}
+
+    {% include "partials/header.njk" ignore missing %}
+
+    {% block crown %}{% endblock %}
+
+    <main class="site-main" id="main-content">{{ content | safe }}</main>
+
+    {% block sidebar %}{% endblock %}
+
+    {% block baseboard %}{% endblock %}
+
+    {% include "partials/footer.njk" ignore missing %}
+    
+    {% for file in scripts %}
+      <script src="/assets/js/{{ file }}" type="module"></script>
+    {% endfor %}
+    {% if foot %}{{ foot | safe }}
+    {% endif %}
+    {% block footer %}{% endblock %}
     {% injectInline 'js' %}
   </body>
 </html>
