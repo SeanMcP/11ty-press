@@ -15,8 +15,10 @@
 {% endif %}
 
 <form class="search-bar" action="{{ params.action }}">
-    <input aria-hidden="true" hidden name="{{ params.hiddenName }}" value="{{ params.hiddenValue }}" />
-    <input aria-label="Search query" name="q" type="search" autocomplete="off" />
+    <input aria-hidden="true" hidden="hidden" name="{{ params.hiddenName }}" value="{{ params.hiddenValue }}"/>
+    <input aria-label="Search query" name="q" type="search" autocomplete="off"/>
     <button>Search</button>
-    <small class="search-bar__attribution">Search powered by <a href="{{ params.url }}" target="_blank" rel="noreferrer">{{ metadata.searchEngine }}</a></small>
+    <small class="search-bar__attribution">Search powered by
+        <a href="{{ params.url }}" target="_blank" rel="noreferrer">{{ metadata.searchEngine }}</a>
+    </small>
 </form>
