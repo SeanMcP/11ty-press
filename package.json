@@ -6,6 +6,7 @@
     "build": "npm-run-all --parallel build:*",
     "build:site": "eleventy",
     "build:styles": "sass --style=compressed src/_appearance/theme/:_site/assets/css/",
+    "debug": "DEBUG=Eleventy* npm-run-all --parallel dev:*",
     "dev:site": "eleventy --serve",
     "dev:styles": "sass --watch src/_appearance/theme/:_site/assets/css/",
     "prestart": "rm -rf _site/",
