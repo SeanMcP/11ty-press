@@ -60,9 +60,10 @@ module.exports = (config) => {
     return postsByDate;
   });
 
-  config.addCollection("tagList", (collectionApi) => {
+  // TODO: Find a way to calculate this once
+  function getAlphabeticalTags(collectionApi) {
     const posts = collectionApi.getFilteredByTag("posts");
-    const tagCount = {};
+    const count = {};
 
     posts.forEach((post) => {
       if (!"tags" in post.data) return;
@@ -70,26 +71,30 @@ module.exports = (config) => {
       post.data.tags.forEach((tag) => {
         // Exclude "posts" from list
         if (tag === "posts") return;
-        if (!tagCount[tag]) {
-          tagCount[tag] = 1;
+        if (!count[tag]) {
+          count[tag] = 1;
         } else {
-          tagCount[tag]++;
+          count[tag]++;
         }
       });
     });
 
-    const alphabetical = Object.keys(tagCount).sort();
-    const popular = alphabetical.sort((a, b) => tagCount[b] - tagCount[a]);
-    const popularWithCount = popular.reduce((acc, current) => {
-      acc.push([current, tagCount[current]]);
-      return acc;
-    }, []);
+    return { alphabetical: Object.keys(count).sort(), count };
+  }
 
-    return {
-      alphabetical,
-      popular,
-      popularWithCount,
-    };
+  config.addCollection("tagsAll", (collectionApi) => {
+    return getAlphabeticalTags(collectionApi).alphabetical;
+  });
+
+  config.addCollection("tagsPopular", (collectionApi) => {
+    const { alphabetical, count } = getAlphabeticalTags(collectionApi);
+
+    return alphabetical
+      .sort((a, b) => count[b] - count[a])
+      .reduce((acc, current) => {
+        acc.push([current, count[current]]);
+        return acc;
+      }, []);
   });
 
   return {

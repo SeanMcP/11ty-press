@@ -1,7 +1,7 @@
 <div class="tag-list">
     <h3>Tag list</h3>
     <ul>
-        {% for tag in collections.tagList.popularWithCount %}
+        {% for tag in collections.tagsPopular %}
             <li>
                 <a href="tags/{{tag[0]}}">{{ tag[0] | capitalize }}
                     ({{ tag[1] }})</a>
