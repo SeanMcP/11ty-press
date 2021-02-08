@@ -100,6 +100,7 @@ module.exports = (config) => {
   return {
     markdownTemplateEngine: "njk",
     dir: {
+      data: '_settings/',
       input: "src/",
       includes: "_appearance/",
     },
