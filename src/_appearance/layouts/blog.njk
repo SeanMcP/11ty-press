@@ -13,15 +13,15 @@
 
 {% block sidebar %}
 <aside class="blog-sidebar" id="sidebar-content">
-    {% include "partials/tag-cloud.njk" %}
-    {% include "partials/tag-list.njk" %}
-    {% include "partials/archive.njk" %}
+    {% include "widgets/tag-cloud.njk" %}
+    {% include "widgets/tag-list.njk" %}
+    {% include "widgets/archive.njk" %}
 </aside>
 {% endblock %}
 
 {% block baseboard %}
 <section class="blog-baseboard">
-    {% include "partials/search-bar.njk" %}
-    {% include "partials/recent-posts.njk" %}
+    {% include "widgets/search-bar.njk" %}
+    {% include "widgets/recent-posts.njk" %}
 </sectino>
 {% endblock %}
