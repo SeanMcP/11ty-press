@@ -4,13 +4,22 @@ publish_mode: editorial_workflow
 media_folder: "src/_media"
 # public_folder:
 collections:
-  - name: "blog"
-    label: "Blog"
+  - name: "page"
+    label: "Page"
+    folder: "src/pages"
+    # create: true
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      # Consider using a select widget
+      - {label: "Layout", name: "layout", required: false, widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"}
+  - name: "post"
+    label: "Post"
     folder: "src/posts"
     create: true
     fields:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Featured Image", name: "postImage", widget: "image"}
+      - {label: "Featured Image", name: "postImage", required: false, widget: "image"}
       - {label: "Tags", name: "tags", widget: "list"}
       - {label: "Body", name: "body", widget: "markdown"}
