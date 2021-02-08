@@ -7,6 +7,7 @@ module.exports = (config) => {
 
   /* ---------- SETTINGS ---------- */
   config.addPassthroughCopy({ "src/_appearance/theme/assets/": "assets/" });
+  config.addPassthroughCopy("src/admin/config.yml");
   // Reload on sass changes
   config.addWatchTarget("src/_appearance/theme/");
   config.setDataDeepMerge(true);
