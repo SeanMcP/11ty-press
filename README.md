@@ -9,6 +9,7 @@
 - 💉 Custom shortcodes for injecting inline CSS and JavaScript
 - 🗃 Wordpress-style directory structure
 - 📰 A blog with feed
+- 🚀 [Netlify CMS](https://www.netlifycms.org/) to create posts and edit pages
 ## Organization
 
 Every directory in `src/` that is prefaced with an underscore (`_`) is for configuration. When working with content, you will mostly be in `posts/` and `pages/`.
