@@ -3,7 +3,7 @@
     <ul>
         {% for tag in collections.tagsPopular %}
             <li>
-                <a href="tags/{{tag[0]}}">{{ tag[0] | capitalize }}
+                <a href="/tag/{{tag[0]}}">{{ tag[0] | capitalize }}
                     ({{ tag[1] }})</a>
             </li>
         {% endfor %}

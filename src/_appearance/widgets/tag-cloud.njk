@@ -4,7 +4,7 @@
         {% set max = collections.tagsPopular[0][1] %}
         {% for tag in collections.tagsPopular | shuffle %}
             <li>
-                <a href="tags/{{tag[0]}}" style="font-size:max(calc(1rem - {{ (max - tag[1]) * 2 }}px), 0.5rem)">{{ tag[0] | capitalize }}</a>
+                <a href="/tag/{{tag[0]}}" style="font-size:max(calc(1rem - {{ (max - tag[1]) * 2 }}px), 0.5rem)">{{ tag[0] | capitalize }}</a>
             </li>
         {% endfor %}
     </ol>
