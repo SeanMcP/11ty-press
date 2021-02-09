@@ -3,20 +3,21 @@
     https://github.com/hankchizljaw/hylia/blob/master/src/_includes/partials/global/meta-info.njk
  #}
 
-{% set pageTitle = ((title + ' - ') if title else '') + metadata.title %}
+{% set pageTitle = renderData.title or title %}
+{% set fullTitle = ((pageTitle + ' - ') if pageTitle else '') + metadata.title %}
 {% set pageDesc = description or metadata.description %}
 {% set siteTitle = metadata.title %}
 {% set currentUrl = metadata.url + page.url %}
 
 {% if metaTitle %}
-    {% set pageTitle = metaTitle %}
+    {% set fullTitle = metaTitle %}
 {% endif %}
 
 {% if metaDesc %}
     {% set pageDesc = metaDesc %}
 {% endif %}
 
-<title>{{ pageTitle }}</title>
+<title>{{ fullTitle }}</title>
 <link rel="canonical" href="{{ currentUrl }}"/>
 
 <meta property="og:site_name" content="{{ siteTitle }}"/>

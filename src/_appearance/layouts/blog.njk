@@ -7,7 +7,7 @@
 
 {% block crown %}
 <section class="blog-crown" style="background-color:darkgreen;color:white;font-size:3rem;padding:40px;text-align:center;width:calc(100% - 80px);">
-    <h1>{{ title or renderData.title }}</h1>
+    <h1>{{ renderData.title or title }}</h1>
 </section>
 {% endblock %}
 

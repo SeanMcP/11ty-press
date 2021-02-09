@@ -7,6 +7,7 @@ pagination:
 renderData:
   title: "Tag: {{ tag | capitalize }}"
 permalink: /tag/{{ tag }}/
+title: "Tag"
 ---
 
 {% for post in collections[tag] | reverse %}
