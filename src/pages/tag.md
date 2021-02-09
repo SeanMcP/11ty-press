@@ -4,7 +4,7 @@ pagination:
   data: collections.tagsAll
   size: 1
   alias: tag
-renderData:
+eleventyComputed:
   title: "Tag: {{ tag | capitalize }}"
 permalink: /tag/{{ tag }}/
 title: "Tag"
