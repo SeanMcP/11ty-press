@@ -1,9 +1,10 @@
 module.exports = (config) => {
   /* ---------- PLUGINS ---------- */
   config.addPlugin(require("@11ty/eleventy-plugin-rss"));
-  config.addPlugin(require("./src/_plugins/inline"));
   config.addPlugin(require("./src/_plugins/404"));
   config.addPlugin(require("./src/_plugins/image"));
+  config.addPlugin(require("./src/_plugins/inline"));
+  config.addPlugin(require("./src/_plugins/markdown"));
 
   /* ---------- SETTINGS ---------- */
   config.addPassthroughCopy({
