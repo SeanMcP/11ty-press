@@ -6,7 +6,10 @@ module.exports = (config) => {
   config.addPlugin(require("./src/_plugins/image"));
 
   /* ---------- SETTINGS ---------- */
-  config.addPassthroughCopy({ "src/_appearance/theme/assets/": "assets/" });
+  config.addPassthroughCopy({
+    "src/_appearance/theme/assets/": "assets/",
+    "src/_media/": "assets/images/",
+  });
   config.addPassthroughCopy("src/admin/config.yml");
   // Reload on sass changes
   config.addWatchTarget("src/_appearance/theme/");
@@ -101,7 +104,7 @@ module.exports = (config) => {
   return {
     markdownTemplateEngine: "njk",
     dir: {
-      data: '_settings/',
+      data: "_settings/",
       input: "src/",
       includes: "_appearance/",
     },
